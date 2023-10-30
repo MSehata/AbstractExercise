@@ -3,13 +3,13 @@ package org.example;
 public class Main {
     public static void main(String[] args)
     {
-        Shape rectangle = new Rectangle(5, 7);
+        Shape rectangle = new Rectangle(7, 14);
         System.out.println("Area of Rectangle: " + rectangle.getArea());
 
-        Shape circle = new Circle(3);
+        Shape circle = new Circle(5);
         System.out.println("Area of Circle: " + circle.getArea());
 
-        Shape triangle = new Triangle(4, 6);
+        Shape triangle = new Triangle(5, 5);
         System.out.println("Area of Triangle: " + triangle.getArea());
     }
 }
@@ -21,8 +21,8 @@ interface Shape {
 
 // Implement the Shape interface in the Rectangle class
 class Rectangle implements Shape {
-    private double length;
-    private double width;
+    private final double length;
+    private final double width;
 
     public Rectangle(double length, double width) {
         this.length = length;
@@ -37,7 +37,7 @@ class Rectangle implements Shape {
 
 // Implement the Shape interface in the Circle class
 class Circle implements Shape {
-    private double radius;
+    private final double radius;
 
     public Circle(double radius) {
         this.radius = radius;
@@ -51,8 +51,8 @@ class Circle implements Shape {
 
 // Implement the Shape interface in the Triangle class
 class Triangle implements Shape {
-    private double base;
-    private double height;
+    private final double base;
+    private final double height;
 
     public Triangle(double base, double height) {
         this.base = base;
